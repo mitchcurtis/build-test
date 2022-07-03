@@ -1,9 +1,15 @@
 ﻿#include "Application.h"
 
-#include <QDebug>
-
-int Application::run()
+Application::Application() :
+    AbstractApplication()
 {
-    qDebug() << "Running...";
-    return 0;
+}
+
+Application::~Application()
+{
+}
+
+QDir Application::assetsQmlDir() const
+{
+    return {};
 }

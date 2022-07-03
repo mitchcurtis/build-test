@@ -1,11 +1,9 @@
 #include "AbstractApplication.h"
 
-#include <QCoreApplication>
-#include <QLoggingCategory>
-
-int AbstractApplication::run(int &argc, char **argv)
+AbstractApplication::AbstractApplication()
 {
-    Q_UNUSED(argc);
-    Q_UNUSED(argv);
-    return 0;
+}
+
+AbstractApplication::~AbstractApplication()
+{
 }

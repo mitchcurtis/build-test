@@ -1,8 +1,6 @@
 #ifndef APPLICATION_H
 #define APPLICATION_H
 
-#include <QObject>
-
 #include "AbstractApplication.h"
 
 class Application : public AbstractApplication
@@ -10,9 +8,10 @@ class Application : public AbstractApplication
     Q_OBJECT
 
 public:
-    Application() = default;
+    Application();
+    ~Application() override;
 
-    int run();
+    QDir assetsQmlDir() const override;
 };
 
 #endif // APPLICATION_H

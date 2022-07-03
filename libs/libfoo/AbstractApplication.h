@@ -2,6 +2,7 @@
 #define ABSTRACTAPPLICATION_H
 
 #include <QObject>
+#include <QDir>
 
 #include "FooGlobal.h"
 
@@ -10,7 +11,13 @@ class FOO_EXPORT AbstractApplication : public QObject
     Q_OBJECT
 
 public:
-    virtual int run(int &argc, char **argv);
+    AbstractApplication();
+    ~AbstractApplication() override;
+
+    virtual QDir assetsQmlDir() const = 0;
+
+protected:
+    Q_DISABLE_COPY(AbstractApplication)
 };
 
 #endif // ABSTRACTAPPLICATION_H
